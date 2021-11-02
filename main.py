@@ -65,11 +65,16 @@ def convert_to_webm(link):
     return modified
 
 
-main_data1 = export_links(verbal_base_urls)
-for section, sub_section in main_data1.items():
-    print(section)
-    for sub_key, sub_value in sub_section.items():
-        print(f"\t\t{sub_key} ---> {sub_value}")
+def start_point(a):
+    main_data1 = export_links(a)
+    for section, sub_section in main_data1.items():
+        print(section)
+        for sub_key, sub_value in sub_section.items():
+            print(f"\t\t{sub_key} ---> {sub_value}")
+
+
+start_point(math_base_url)
+start_point(verbal_base_urls)
 
 
 
